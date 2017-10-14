@@ -20,8 +20,8 @@
 #ifndef _LINUX_BINDER_H
 #define _LINUX_BINDER_H
 
-#include "linux/types.h"
-#include "linux/ioctl.h"
+#include <linux/types.h>
+#include <linux/ioctl.h>
 
 #define B_PACK_CHARS(c1, c2, c3, c4) \
 	((((c1)<<24)) | (((c2)<<16)) | (((c3)<<8)) | (c4))
@@ -183,7 +183,6 @@ struct binder_pri_ptr_cookie {
 	binder_uintptr_t cookie;
 };
 
-// BR_ERROR = _IOR_BAD('r', 0, int),
 enum binder_driver_return_protocol {
 	BR_ERROR = _IOR('r', 0, __s32),
 	/*
